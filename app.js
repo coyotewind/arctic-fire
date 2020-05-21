@@ -103,18 +103,33 @@ function isCurrent(todo) {
 //     });
 // }
 
+// function splitTodos() {
+//     pendingTodos = todos.filter(function(todo) {
+//         console.log('pending is true')
+//         return todo.isComplete == false && isCurrent(todo) == true;
+//     });
+//     completedTodos = todos.filter(function(todo) {
+//         console.log('completed is true')
+//         return todo.isComplete == true;
+//     });
+//     expiredTodos = todos.filter(function(todo) {
+//         console.log('expired is true')
+//         return todo.isComplete == false && isCurrent(todo) == false;
+//     });
+// }
+
 function splitTodos() {
     pendingTodos = todos.filter(function(todo) {
         console.log('pending is true')
-        return todo.isComplete == false && isCurrent(todo) == true;
+        return !todo.isComplete && isCurrent(todo);
     });
     completedTodos = todos.filter(function(todo) {
         console.log('completed is true')
-        return todo.isComplete == true;
+        return todo.isComplete;
     });
     expiredTodos = todos.filter(function(todo) {
         console.log('expired is true')
-        return todo.isComplete == false && isCurrent(todo) == false;
+        return !todo.isComplete && !isCurrent(todo);
     });
 }
 
