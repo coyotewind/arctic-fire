@@ -26,10 +26,8 @@ function createElementFromTodo(todo) {
         <h3><span class="title">${todo.title}</span><span class="due-date">${todo.dueDate}</span></h3>
         <pre>${todo.description}</pre>
         <footer class="actions">    
-        ${ todo.isComplete
-            ? ''
-            : '<button class="action complete">Complete</button>'
-        }<button class="action delete">Delete</button>
+            ${ todo.isComplete ? '' : '<button class="action complete">Complete</button>' }
+            <button class="action delete">Delete</button>
         </footer>
     </div> `).data('todo', todo);
 }
@@ -84,26 +82,39 @@ function isCurrent(todo) {
 // set variable to a filter of todos as todo
 // use conditional to split todos and return true
 
-function splitTodos() {
-    pendingTodos = todos.filter(function (todo) {
-    
-    if ((todo.isComplete == false) && (isCurrent(todo) == true)) {
+// function splitTodos() {
+//     pendingTodos = todos.filter(function (todo) {
+//     if ((todo.isComplete == false) && (isCurrent(todo) == true)) {
+//             console.log('pending is true')
+//             return true;
+//         }
+//     });
+//     completedTodos = todos.filter(function (todo) {
+//         if (todo.isComplete == true) {
+//             console.log('completed is true')
+//             return true;
+//         }
+//     });
+//     expiredTodos = todos.filter(function (todo) {
+//         if (todo.isComplete == false && isCurrent(todo) == false) {
+//             console.log('expired is true')
+//             return true;
+//         }
+//     });
+// }
 
-            console.log('pending is true')
-            return true;
-        }
+function splitTodos() {
+    pendingTodos = todos.filter(function(todo) {
+        console.log('pending is true')
+        return todo.isComplete == false && isCurrent(todo) == true;
     });
-    completedTodos = todos.filter(function (todo) {
-        if (todo.isComplete == true) {
-            console.log('completed is true')
-            return true;
-        }
+    completedTodos = todos.filter(function(todo) {
+        console.log('completed is true')
+        return todo.isComplete == true;
     });
-    expiredTodos = todos.filter(function (todo) {
-        if (todo.isComplete == false && isCurrent(todo) == false) {
-            console.log('expired is true')
-            return true;
-        }
+    expiredTodos = todos.filter(function(todo) {
+        console.log('expired is true')
+        return todo.isComplete == false && isCurrent(todo) == false;
     });
 }
 
@@ -125,6 +136,7 @@ function renderTodos() {
 }
 
 // build click handler to open and close the left drawer
+
 $('.left-drawer').click(function (todo) {
     $(todo.target).hasClass('left-drawer')
         ? $('#app').toggleClass('drawer-open')
