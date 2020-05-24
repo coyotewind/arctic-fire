@@ -89,9 +89,10 @@ function fetchDefaultTodos() {
 $('main').on('click', '.title', function () {
 
     moveThis = $(this).closest('.todo').data();
+    moveThis.todo.isComplete = !moveThis.todo.isComplete;
     console.log(moveThis);
 
-    // getThese = JSON.parse(localStorage.getItem('todos')); // gets whole array
+    // getThese = JSON.parse(localStorage.getItem('todos', isComplete)); // gets whole array
     // getThis = getThese.filter(function(todo) { // gets only those that are complete
     //     return todo.isComplete // how to get the data from the object clicked?
     // });
@@ -100,7 +101,6 @@ $('main').on('click', '.title', function () {
 
 
 $('h3.list-title:not(.expired)').on('click', function() { 
-    moveThis.todo.isComplete = !moveThis.todo.isComplete;
     updateAll();
 });
 
