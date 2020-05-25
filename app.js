@@ -67,7 +67,7 @@ function fetchDefaultTodos() {
         { title: 'Kiss Your Wife', dueDate: '05/31/2020', description: 'Remember to do this a few times a day.', isComplete: true },
         { title: 'Call Someone Unexectedly', dueDate: '04/30/2020', description: 'Tell them how much they mean to you.', isComplete: false },
         { title: 'Pet Your Dog', dueDate: '04/30/2020', description: 'Afterall, he is one of your best friends and never judges you.', isComplete: true },
-        { title: 'Learn Something New', dueDate: '04/30/2020', description: 'Keep in mind, information has no purpose unless you share it freely', isComplete: true },
+        { title: 'Learn Something New', dueDate: '04/30/2020', description: 'Keep in mind, information best serves society when shared freely', isComplete: true },
         { title: 'Look In The Mirror', dueDate: '04/30/2020', description: 'Tell yourself you look beautiful, but see the beauty inside as well.', isComplete: false },
         { title: 'Smile At A Stranger', dueDate: '05/31/2020', description: 'It will brighten their day and it costs you nothing.', isComplete: true },
     ];
