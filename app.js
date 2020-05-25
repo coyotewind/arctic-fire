@@ -40,7 +40,6 @@ function createElementFromTodo(todo) {
 function storeData() {
     localStorage.setItem('todos', JSON.stringify(todos));
     localStorage.setItem('prefs', JSON.stringify(prefs));
-    console.log('prefs set');
 }
 
 // retrieve todos from local storage to populate todos
@@ -84,6 +83,7 @@ function fetchDefaultTodos() {
 // I would like to know how to access the value from a specific property, from an object, stored in an array
 // I also want to know how to do this potentially without having to grab the entire array first
 
+
 // @natalie: question is related to this...
 
 $('main').on('click', '.title', function () {
@@ -98,7 +98,6 @@ $('main').on('click', '.title', function () {
     // });
     
 });
-
 
 $('h3.list-title:not(.expired)').on('click', function() { 
     updateAll();
