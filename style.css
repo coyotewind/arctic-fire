@@ -59,13 +59,13 @@ header {
     padding: 10px;
     position: relative;
     top: 85px;
-    transition: width 0.5s ease, background 0.5s ease;
+    transition: width 0.5s ease, background 0.2s ease;
     width: 90px;
 }
 
 .left-drawer:hover {
     background: #1e7b85;
-    transition: background 0.5s ease;
+    transition: background 0.2s ease;
 }
 
 /* styles all the action buttons */
@@ -145,16 +145,16 @@ button.action:hover {
     font-weight: 700;
     font-size: 16px;
     opacity: 0;
-    transition: 0.2s all ease-out;
+    transition: all 0.2s ease-in-out;
     visibility: hidden;
-    width: 0;
+    max-width: 0;
 }
 
 .left-drawer .update-prefs .custom-controls.open { 
     opacity: 1;
-    transition: 0.5s all ease-in;
+    transition: all 0.2s ease-in-out;
     visibility: visible;
-    width: auto;
+    max-width: 100%;
 }
 
 .left-drawer .update-prefs .custom-controls section {
@@ -169,7 +169,7 @@ button.action:hover {
 }
 
 .drawer-open .left-drawer {
-    transition: background 0.5s ease, width 0.5s ease;
+    transition: all 0.5s ease;
     width: 300px;
 }
 .drawer-open .action {
@@ -410,11 +410,14 @@ main {
 
 .dark header { background: #1a1d24; color: #caced9; }
 
-.dark .left-drawer { background: #5a3d5c; transition: all 0.1s ease; }
-.dark .left-drawer button.action { background: #1a1d24; color: #caced9; transition: all 0.1s ease; }
-.dark .left-drawer button.action i { color: #caced9; transition: all 0.1s ease; }
-.dark .left-drawer button.update-prefs { color: #caced9; transition: all 0.1s ease; }
+.dark .left-drawer { background: #5a3d5c; transition: all 0.2s ease; }
+.dark .left-drawer:hover { background: #664568; transition: all 0.2s ease; }
+
+.dark .left-drawer button.action { background: #1a1d24; color: #caced9; transition: all 0.2s ease; }
+.dark .left-drawer button.action i { color: #caced9; transition: all 0.2s ease; }
+.dark .left-drawer button.update-prefs { color: #caced9; transition: all 0.2s ease; }
 .dark main { background-color: #382039; }
 .dark .list-title { color: #caced9; }
 .dark .content { background: #caced9; }
 .dark .content-footer { background: #caced9; }
+
