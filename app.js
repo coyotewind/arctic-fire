@@ -59,7 +59,7 @@ function retrieveData() {
 
 function fetchDefaultTodos() {
     return [
-        { title: 'Create New Todo', dueDate: '06/30/2020', description: 'Click the create icon (+)  to the left to make a new todo.', isComplete: false },
+        { title: 'Create New Todo', dueDate: '06/30/2020', description: 'Click the create icon (+) to the left to make a new todo.', isComplete: false },
         { title: 'Mark Todo Complete', dueDate: '06/30/2020', description: 'Use the complete button to move this to the completed column', isComplete: false },
         { title: 'Delete Todo', dueDate: '06/30/2020', description: 'Use the delete button to remove this todo at any time.', isComplete: false },
         { title: 'Clear Completed Todo', dueDate: '06/30/2020', description: 'Click the checkbox icon to the left to remove completed todos.', isComplete: false },
