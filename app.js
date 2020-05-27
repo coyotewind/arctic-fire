@@ -1,4 +1,4 @@
-//setting up some global variables
+//setting up some global variable
 
 let todos, pendingTodos, completedTodos, expiredTodos, prefs, moveThis;
 
