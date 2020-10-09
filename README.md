@@ -3,7 +3,7 @@
 ### Description
 
 - A functioning To-Do app to see pending, completed, and expired to dos.
-- It can be seen at https://blue-velvet.netlify.app/
+- It can be seen at https://arctic-fire.netlify.app/
 
 ### What I Learned:
 
