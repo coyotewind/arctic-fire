@@ -9,6 +9,7 @@
 
 - Our first foray into JSON stringfy and parse.
 - Use of local storage to make user preferences persistent
+- Introducion to the concept of state.
 
 ### What I am Proud Of:
 
